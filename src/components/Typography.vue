@@ -3,7 +3,6 @@
 </template>
 
 <script setup>
-import '../style.css';
 import {computed} from "vue";
 
 const props = defineProps({
