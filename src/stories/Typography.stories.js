@@ -34,5 +34,5 @@ Paragraph.args = {
 
 export const Normal = Template.bind({});
 Normal.args = {
-  text: 'Random Text',
+  text: 'Hello world',
 };

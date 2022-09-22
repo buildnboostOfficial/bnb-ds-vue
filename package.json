@@ -8,7 +8,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=baec03d10f2f"
   },
   "dependencies": {
     "vue": "^3.2.37"
@@ -34,5 +35,7 @@
     "vite": "^3.1.0",
     "vue-loader": "^16.8.3",
     "vue-tsc": "^0.40.4"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "bnb-ds-vue@0.0.0"
 }
