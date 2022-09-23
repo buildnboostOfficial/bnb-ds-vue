@@ -1,12 +1,9 @@
 <template>
-  <button type="button" :class="classes" @click="emit('click')" :style="style">
-    <typography :text="label" :style="style" />
-  </button>
+  <button type="button" :class="classes" @click="emit('click')" :style="style">{{ label }}</button>
 </template>
 
 <script setup>
 import {computed} from 'vue';
-import Typography from "./Typography.vue";
 
 const props = defineProps({
   label: {
