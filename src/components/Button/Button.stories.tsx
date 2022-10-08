@@ -1,6 +1,6 @@
 import CustomButton from './Button.vue';
-import {buttonType, buttonSize, buttonVariant} from "./Button.constants.js";
-import {IconsList} from "../Icon/index.js";
+import {buttonType, buttonSize, buttonVariant} from "./Button.constants";
+import {IconsList} from "../Icon/index";
 
 export default {
   title: 'Components/Button',
@@ -36,7 +36,7 @@ export default {
   },
 };
 
-const Template = (args) => ({
+const Template = (args: any) => ({
   components: { CustomButton },
   setup() {
     return { args };
@@ -44,32 +44,31 @@ const Template = (args) => ({
   template: '<custom-button v-bind="args" />',
 });
 
-export const Primary = Template.bind({});
-
+export const Primary: any = Template.bind({});
 Primary.args = {
   type: 'primary',
   label: 'Login',
 };
 
-export const Secondary = Template.bind({});
+export const Secondary: any = Template.bind({});
 Secondary.args = {
   type: 'secondary',
   label: 'Login',
 };
 
-export const Small = Template.bind({});
+export const Small: any = Template.bind({});
 Small.args = {
   size: 'small',
   label: 'Login',
 };
 
-export const Medium = Template.bind({});
+export const Medium: any = Template.bind({});
 Medium.args = {
   size: 'medium',
   label: 'Login',
 };
 
-export const Large = Template.bind({});
+export const Large: any = Template.bind({});
 Large.args = {
   size: 'large',
   label: 'Login',

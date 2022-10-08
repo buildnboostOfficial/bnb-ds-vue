@@ -12,7 +12,7 @@ export default {
   },
 };
 
-const Template = (args) => ({
+const Template = (args: any) => ({
   components: { IconList },
   setup() {
     return { args };
@@ -20,7 +20,7 @@ const Template = (args) => ({
   template: '<icon-list v-bind="args" />',
 });
 
-export const Default = Template.bind({});
+export const Default: any = Template.bind({});
 Default.args = {
   iconSizes: 24
 }

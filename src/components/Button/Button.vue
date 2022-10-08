@@ -11,7 +11,7 @@
 import {computed} from 'vue';
 import Icon from "../Icon/Icon.vue";
 import {IconsList} from "../Icon";
-import {buttonType, buttonSize, buttonVariant} from "./Button.constants.js";
+import {buttonType, buttonSize, buttonVariant} from "./Button.constants.ts";
 
 const props = defineProps({
   label: {

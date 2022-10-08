@@ -1,5 +1,5 @@
 import Input from './Input.vue';
-import {IconsList} from "../Icon";
+import {IconsList} from "../Icon/index";
 
 export default {
   title: 'Components/Input',
@@ -21,7 +21,7 @@ export default {
   },
 };
 
-const Template = (args) => ({
+const Template = (args: any) => ({
   components: { Input },
   setup() {
     return { args };
@@ -29,13 +29,13 @@ const Template = (args) => ({
   template: '<Input v-bind="args" />',
 });
 
-export const Default = Template.bind({});
+export const Default: any = Template.bind({});
 Default.args = {
   placeholder: 'Email',
   type: 'email'
 };
 
-export const Password = Template.bind({});
+export const Password: any = Template.bind({});
 Password.args = {
   placeholder: 'Password',
   type: 'password'
