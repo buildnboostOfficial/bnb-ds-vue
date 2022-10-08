@@ -4,7 +4,11 @@ export default {
   title: 'Icons',
   component: IconList,
   argTypes: {
-    iconSizes: 24
+    iconSizes: 24,
+    type: {
+      control: { type: 'select' },
+      options: ['primary', 'secondary'],
+    },
   },
 };
 

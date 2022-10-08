@@ -1,15 +1,38 @@
 import CustomButton from './Button.vue';
+import {buttonType, buttonSize, buttonVariant} from "./Button.constants.js";
+import {IconsList} from "../Icon/index.js";
 
 export default {
   title: 'Components/Button',
   component: CustomButton,
   argTypes: {
-    backgroundColor: { control: 'color' },
     onClick: {},
+    type: {
+      control: { type: 'select' },
+      options: buttonType,
+    },
+    variant: {
+      control: { type: 'select' },
+      options: buttonVariant,
+    },
     size: {
       control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
+      options: buttonSize,
     },
+    startIcon: {
+      control: { type: 'select' },
+      options: Object.values(IconsList).map((icon) => icon.__name),
+    },
+    endIcon: {
+      control: { type: 'select' },
+      options: Object.values(IconsList).map((icon) => icon.__name),
+    },
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/cPMAilSoUZC04knmfo4rtk/Untitled",
+    }
   },
 };
 
@@ -22,30 +45,32 @@ const Template = (args) => ({
 });
 
 export const Primary = Template.bind({});
+
 Primary.args = {
-  primary: true,
-  label: 'Button',
+  type: 'primary',
+  label: 'Login',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
+  type: 'secondary',
+  label: 'Login',
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
-  label: 'Button',
+  label: 'Login',
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
   size: 'medium',
-  label: 'Button',
+  label: 'Login',
 };
 
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
-  label: 'Button',
+  label: 'Login',
 };
