@@ -1,4 +1,4 @@
-import Typography from '../components/Typography.vue';
+import Typography from './Typography.vue';
 
 export default {
   title: 'Components/Typography',
@@ -12,7 +12,7 @@ export default {
   },
 };
 
-const Template = (args) => ({
+const Template = (args: any) => ({
   components: { Typography },
   setup() {
     return { args };
@@ -20,19 +20,19 @@ const Template = (args) => ({
   template: '<typography v-bind="args" />',
 });
 
-export const Header = Template.bind({});
+export const Header: any = Template.bind({});
 Header.args = {
   text: 'Header',
   type: 'h1'
 };
 
-export const Paragraph = Template.bind({});
+export const Paragraph: any = Template.bind({});
 Paragraph.args = {
   text: 'Paragraph',
   type: 'p'
 };
 
-export const Normal = Template.bind({});
+export const Normal: any = Template.bind({});
 Normal.args = {
   text: 'Hello world',
 };
